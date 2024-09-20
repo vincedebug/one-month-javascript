@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Can you get a car?</title>
+
+		<style>
+			
+			/* Basic CSS comment */	
+			body {
+				background: #BBB;
+				color: white;
+				width: 960px;
+				margin: 0 auto;
+			}
+
+			h1 {
+				font-size: 80px;
+				color: #333	;
+			}
+
+		</style>
+		<script>
+			var  username = prompt("enter your name: ");
+
+			document.write("<h1>" + name + "</h1>");
+
+			var car = new Array("BMW", "Saab", "Maserati");
+
+      var randomNumber = Math.floor(Math.random()*car.length);
+
+			console.log(randomNumber);
+
+      let carImage = [
+        "BMW.jpg",
+				"Saab.jpg",
+				"Maserati.jpg"
+      ];
+			
+			if(username==="Vince" || "Chris"){
+				document.write("<h1> hello "+ username + " you won a " + car[randomNumber] + "!</h1>");
+
+				let carImageElement = document.createElement("img");
+				carImageElement.src = carImage[randomNumber];
+				carImageElement.alt = car[randomNumber];
+				carImageElement.width = 300;
+
+				document.body.appendChild(carImageElement);
+			}
+
+		</script>
+
+
+	</head>
+ 	
+	<body>
+		<img src="oprah.jpg" alt="Oprah">
+
+		
+	</body>
+
+</html>

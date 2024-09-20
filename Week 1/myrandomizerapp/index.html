@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Random Schedule Today</title>
+
+    <style>
+      body {
+        background-color: green;
+        font-family: Arial, sans-serif;
+        color: white;
+      }
+      h1 {
+        text-align: center;
+        font-size: 50px;
+      }
+      p {
+        text-align: center;
+        font-size: 24px;
+      }
+    </style>
+
+    <script>
+      // Function to generate a random schedule
+      function generateRandomSchedule() {
+        let randomTodo1 = [
+          "Play Mobile Legends",
+          "Binge Watch YouTube",
+          "Study"
+        ];
+
+        let randomTodo2 = [
+          "working out",
+          "sleeping",
+          "coding"
+        ];
+
+        let randomTodo3 = [
+          "the kitchen",
+          "rooftop",
+          "the living room"
+        ];
+
+        // Generate a random index
+        let randomIndex = Math.floor(Math.random() * randomTodo1.length);
+
+        // Create the schedule text
+        let todo = "You are going to " + randomTodo1[randomIndex] + " while " + randomTodo2[randomIndex] + " in " + randomTodo3[randomIndex];
+
+        // Create a paragraph element and set its text
+        let todoElement = document.createElement("p");
+        todoElement.textContent = todo;
+
+        // Append the paragraph to the body
+        document.body.appendChild(todoElement);
+      }
+
+      // Call the function when the window loads
+      window.onload = generateRandomSchedule;
+    </script>
+  </head>
+  <body>
+    <h1>Your Schedule for Today is to</h1>
+  </body>
+</html>
